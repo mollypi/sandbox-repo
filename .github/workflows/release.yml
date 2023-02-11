@@ -1,45 +1,45 @@
-name: changelog
+# name: changelog
 
-on:
-  push:
-   branches:
-    - development
+# on:
+#   push:
+#    branches:
+#     - development
     
-permissions:
-  actions: read
-  contents: read
-  security-events: write
+# permissions:
+#   actions: read
+#   contents: read
+#   security-events: write
 
-jobs:
-  title-formatting:
-    name: changelog
-    runs-on: ubuntu-latest
+# jobs:
+#   title-formatting:
+#     name: changelog
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Changelog
-        uses: ardalanamini/auto-changelog@v3
-        id: changelog
-        with:
-          github-token: ${{ github.token }}
-          commit-types: |
-            breaking: Breaking Changes
-            feat: New Features
-            fix: Bug Fixes
-            revert: Reverts
-            perf: Performance Improvements
-            refactor: Refactors
-            deps: Dependencies
-            docs: Documentation Changes
-            style: Code Style Changes
-            build: Build System
-            ci: Continuous Integration
-            test: Tests
-            chore: Chores
-            other: Other Changes
-          default-commit-type: Other Changes
-          release-name: v1.0.0
-          mention-authors: true
-          mention-new-contributors: true
-          include-compare: true
-          semver: true
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Changelog
+#         uses: ardalanamini/auto-changelog@v3
+#         id: changelog
+#         with:
+#           github-token: ${{ github.token }}
+#           commit-types: |
+#             breaking: Breaking Changes
+#             feat: New Features
+#             fix: Bug Fixes
+#             revert: Reverts
+#             perf: Performance Improvements
+#             refactor: Refactors
+#             deps: Dependencies
+#             docs: Documentation Changes
+#             style: Code Style Changes
+#             build: Build System
+#             ci: Continuous Integration
+#             test: Tests
+#             chore: Chores
+#             other: Other Changes
+#           default-commit-type: Other Changes
+#           release-name: v1.0.0
+#           mention-authors: true
+#           mention-new-contributors: true
+#           include-compare: true
+#           semver: true
